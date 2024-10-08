@@ -1,0 +1,29 @@
+{% extens ,'layout.html' %}
+{% block titulo %}registrate{% endblock %}
+{% block contenido %}
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+</nav>
+<div class="container">
+    <div class="form-background">
+    <h1>Iniciar sesión</h1>
+   <form action="/signin" method="post">
+    <input type="email" name="correo" placeholder="Correo">
+    <br>
+    <input type="password" name="clave" placeholder="Contraseña">
+    <br><br>
+    <input type="submit" value="Ingresar">
+  </form>
+    <p class="sign-up-divider">o inicia con</p>
+   <div class="social-media">
+     <ul class="social-media-icons">
+       <li class="google"><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+       <li class="facebook"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+       <li class="twitter"><a href="#"><i class="fab fa-twitter"></i></a></li>
+     </ul>
+   </div> 
+  </div>
+  <div class="login">
+    <p>¿Necesitas una cuenta?<a href="#">Registrarse</a></p>
+  </div>
+  </div>
+  

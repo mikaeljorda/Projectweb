@@ -35,6 +35,24 @@ def signup():
   else:  
     return render_template('signup.html',methods = {'GET','POST'})
 
+@justeat.route('/signin' methods = ['GET','POST'])
+def signin():
+  if request.method =='POST':
+    usuario = User(0, None, request.form['correo'], request.form[clave], None ,None)
+    usuarioAuntenticado = ModelUser.signin(db, usuario)
+    if usuarioAuntenticado is not None :
+      login_user(usuarioAuntenticado)
+      if usuarioAuntenticado.clave:
+        if usuarioAuntenticado.perfil == 'A':
+          return render_template ('admin.html')
+        else:
+          return render_template('User.html')
+      else:
+        return 'contraseña incorrecta'
+    else:
+      return 'usuario inexistente'
+  else:
+      return render_template('signin,html')
 if __name__ == '__main__':
   justeat.config.from_object(config['development'])
   justeat.run(port=3300) 
