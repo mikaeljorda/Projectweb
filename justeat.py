@@ -53,6 +53,10 @@ def signin():
       return 'usuario inexistente'
   else:
       return render_template('signin,html')
+@justeat.route('/sigout',methods=['GET','POST0'])
+def  signout():
+  logout_user  ()
+  return render_template('home.html')
 if __name__ == '__main__':
   justeat.config.from_object(config['development'])
   justeat.run(port=3300) 
