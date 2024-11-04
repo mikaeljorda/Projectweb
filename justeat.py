@@ -53,10 +53,29 @@ def signin():
       return 'usuario inexistente'
   else:
       return render_template('signin,html')
-@justeat.route('/sigout',methods=['GET','POST0'])
+@justeat.route('/sigout',methods=['GET','POST'])
 def  signout():
   logout_user  ()
   return render_template('home.html')
-if __name__ == '__main__':
+@justeat.route("usuario",methods = ['GET','POST'])
+def usuario():
+  selusuario db.connection.cursor()
+  selusuario . execute("SELECT FROM usuario")
+  selusuario . fetchall()
+  return render_template("usuarios,html",usuario - u)
+
+@justeat.route('/iUsuario',methods = {'GET','POST'})
+def iUsuario():
+  nombre = request.form['nombre']
+  correo = request.form['correo']
+  ClaveCifrada = generate_password_hash(request.form['clave'])
+  fechareg     = datetime.datetime.now()
+  perfil       = request.form['perfil']
+  regUsuario   = db.connection.cursor()
+  regUsuario.execute("INSERT INTO usuario(nombre.correo,clave,fechareg,perfil)VALUES (%s.%s,%s,%s,%s)"(nombre,correo,ClaveCifrada,fechareg,perfil))
+  db.connection.commit() 
+  regUsuario.close
+
+if __name__ == '__main__': 
   justeat.config.from_object(config['development'])
   justeat.run(port=3300) 
