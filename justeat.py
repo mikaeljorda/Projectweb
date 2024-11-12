@@ -11,7 +11,7 @@ from models.entities.User import User
 justeat = Flask(__name__)
 db = MySQL(justeat)
 adminSession = LoginManager(justeat)      
-
+#pythonanywhere
 @adminSession.user_loader
 def signinuser(id):
   return ModelUser.get_by_id(db,id)
@@ -75,7 +75,7 @@ def iUsuario():
   regUsuario.execute("INSERT INTO usuario(nombre.correo,clave,fechareg,perfil)VALUES (%s.%s,%s,%s,%s)"(nombre,correo,ClaveCifrada,fechareg,perfil))
   db.connection.commit() 
   regUsuario.close
-
-if __name__ == '__main__': 
+#localhost
+if´´´ __name__ == '__main__': 
   justeat.config.from_object(config['development'])
-  justeat.run(port=3300) 
+  justeat.run(port=3300)´´´ 

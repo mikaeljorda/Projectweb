@@ -10,4 +10,8 @@ class ConfigDevelopment(Config):
 
 config = {
     'development': ConfigDevelopment
-}
+
+
+
+
+    }
