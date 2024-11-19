@@ -8,6 +8,16 @@ class ConfigDevelopment(Config):
     MYSQL_PASSWORD = 'mysql'
     MYSQL_DB       = 'justeat'
 
+class configMaIL(Config)
+    MAIL_SERVER   = 'smtp.gmail.com'
+    MAIL_PORT     = 587
+    MAIL_USE_TLS  = True
+    MAIL_USE_SSL  = False
+    MAIL_USERNAME ='alan.avila1645@alumnos.udg,mx'
+    MAIL_PASSWORD =
+    MAIL_DEFAULT_SENDER ='alan.avila1645.@alumnos.mx'
+    MAIL_ASCII_ATACHMENTS = TRUE
+
 config = {
     'development': ConfigDevelopment
 

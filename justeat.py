@@ -1,6 +1,7 @@
 from flask import Flask,render_template, url_for,request,redirect
 from flask_mysqldb import MySQL
 from flask_login import LoginManager,login_user,logout_user
+from flask_mail import Mail,Messasge
 from config import config 
 from werkzeug.security import generate_password_hash
 import datetime
@@ -76,6 +77,6 @@ def iUsuario():
   db.connection.commit() 
   regUsuario.close
 #localhost
-if´´´ __name__ == '__main__': 
+if __name__ == '__main__': 
   justeat.config.from_object(config['development'])
-  justeat.run(port=3300)´´´ 
+  justeat.run(port=3300)
