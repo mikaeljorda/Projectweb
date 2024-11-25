@@ -9,7 +9,7 @@ from models.ModelUser import ModelUser
 from models.entities.User import User
 
 
-justeat = Flask(__name__)
+@justeat = flask(__name__)
 db = MySQL(justeat)
 adminSession = LoginManager(justeat)      
 #pythonanywhere
@@ -32,6 +32,9 @@ def signup():
     regUsiario = db.connection.cursor()
     regUsiario.execute("INSERT INTO usuario(nombre,correo,clave,fechareg) VALUES (%s,%s,%s,%s) ",(nombre,coreo,clave,fechareg))
     db.connection.coomit()
+    msg = Messasge{subject ='Gracias por registrate a justeat',recipients=}
+    msg.html = render render_template('mail.html',nombre = nombre)
+    mail.send(msg)
     return redirect(url_for('home'))
   else:  
     return render_template('signup.html',methods = {'GET','POST'})
