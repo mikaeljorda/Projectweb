@@ -9,7 +9,7 @@ from models.ModelUser import ModelUser
 from models.entities.User import User
 
 
-@justeat = flask(__name__)
+@vinofix = flask(__name__)
 db = MySQL(justeat)
 adminSession = LoginManager(justeat)      
 #pythonanywhere
@@ -18,11 +18,11 @@ def signinuser(id):
   return ModelUser.get_by_id(db,id)
 
 
-@justeat.route('/')
+@vinofix.route('/')
 def home():
   return render_template('home.html')
 
-@justeat.route('/signup')
+@vinofix.route('/signup')
 def signup():
   if request.method == 'POST': 
     nombre = request.form['nombre']
@@ -39,7 +39,7 @@ def signup():
   else:  
     return render_template('signup.html',methods = {'GET','POST'})
 
-@justeat.route('/signin' methods = ['GET','POST'])
+@vinofix.route('/signin' methods = ['GET','POST'])
 def signin():
   if request.method =='POST':
     usuario = User(0, None, request.form['correo'], request.form[clave], None ,None)
@@ -57,18 +57,18 @@ def signin():
       return 'usuario inexistente'
   else:
       return render_template('signin,html')
-@justeat.route('/sigout',methods=['GET','POST'])
+@vinofix.route('/sigout',methods=['GET','POST'])
 def  signout():
   logout_user  ()
   return render_template('home.html')
-@justeat.route("usuario",methods = ['GET','POST'])
+@vinofix.route("usuario",methods = ['GET','POST'])
 def usuario():
   selusuario db.connection.cursor()
   selusuario . execute("SELECT FROM usuario")
   selusuario . fetchall()
   return render_template("usuarios,html",usuario - u)
 
-@justeat.route('/iUsuario',methods = {'GET','POST'})
+@vinofix.route('/iUsuario',methods = {'GET','POST'})
 def iUsuario():
   nombre = request.form['nombre']
   correo = request.form['correo']
