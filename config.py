@@ -16,12 +16,13 @@ class configMaIL(Config)
     MAIL_USERNAME ='alan.avila1645@alumnos.udg,mx'
     MAIL_PASSWORD =
     MAIL_DEFAULT_SENDER ='alan.avila1645.@alumnos.mx'
-    MAIL_ASCII_ATACHMENTS = TRUE
+    MAIL_ASCII_ATACHMENTS = True
+
 
 config = {
-    'development': ConfigDevelopment
+    'development': ConfigDevelopment,
+    'mail'       : ConfigMail
+} 
 
 
-
-
-    }
+    
