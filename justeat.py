@@ -6,7 +6,7 @@ from werkzeug.security import generate_password_hash
 import random
 import string
 import datetime
-from config import config
+from config import Config
 from models.ModelUser import  ModelUser
 from models.entities.User import   User
 
@@ -78,7 +78,6 @@ def signin():
 def forgot_password():
     if request.method == 'POST':
         correo = request.form['correo']
-       
         # Verificar si el correo existe en la base de datos
         cursor = db.connection.cursor()
         cursor.execute("SELECT id, correo FROM usuario WHERE correo = %s", (correo,))

@@ -7,21 +7,31 @@ class ConfigDevelopment(Config):
     MYSQL_USER     = 'root'
     MYSQL_PASSWORD = 'mysql'
     MYSQL_DB       = 'justeat'
+    
+    '''
+    #Pythonawhere
+    MYSQL_HOST      ='justeat.mysql.pythonawhere.services.com'
+    MYSQL_USER      ='justeat'
+    MYSQL_PASSWORD  ='alfaro890$
+    MYSQL_DB        ='justete$justeat'
+    '''
+    
 
-class configMaIL(Config)
+class MailConfig(Config):
     MAIL_SERVER   = 'smtp.gmail.com'
     MAIL_PORT     = 587
     MAIL_USE_TLS  = True
     MAIL_USE_SSL  = False
     MAIL_USERNAME ='alan.avila1645@alumnos.udg,mx'
-    MAIL_PASSWORD =
+    MAIL_PASSWORD = 'neqs jqbw nike elnj'
     MAIL_DEFAULT_SENDER ='alan.avila1645.@alumnos.mx'
     MAIL_ASCII_ATACHMENTS = True
 
 
-config = {
+Config = {
     'development': ConfigDevelopment,
-    'mail'       : ConfigMail
+    'mail'       : MailConfig
+
 } 
 
 

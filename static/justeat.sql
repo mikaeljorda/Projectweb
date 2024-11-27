@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 17-09-2024 a las 16:03:31
+-- Tiempo de generación: 27-11-2024 a las 20:02:13
 -- Versión del servidor: 5.7.44-log
 -- Versión de PHP: 7.4.9
 
@@ -12,9 +12,7 @@ START TRANSACTION;
 SET time_zone = "+00:00";
 
 
-
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8mb4 */;
@@ -26,16 +24,16 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `usuario`
+-- Estructura de tabla para la tabla `justeat`
 --
 
-CREATE TABLE `usuario` (
+CREATE TABLE `justeat` (
   `id` int(11) NOT NULL,
   `nombre` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
   `correo` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
   `clave` varchar(200) COLLATE utf8_spanish_ci NOT NULL,
   `fechareg` datetime NOT NULL,
-  `perfil` char(1) COLLATE utf8_spanish_ci NOT NULL DEFAULT 'U'
+  `perfil` varchar(1) COLLATE utf8_spanish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
@@ -43,9 +41,9 @@ CREATE TABLE `usuario` (
 --
 
 --
--- Indices de la tabla `usuario`
+-- Indices de la tabla `justeat`
 --
-ALTER TABLE `usuario`
+ALTER TABLE `justeat`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -53,9 +51,9 @@ ALTER TABLE `usuario`
 --
 
 --
--- AUTO_INCREMENT de la tabla `usuario`
+-- AUTO_INCREMENT de la tabla `justeat`
 --
-ALTER TABLE `usuario`
+ALTER TABLE `justeat`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
