@@ -11,10 +11,11 @@ from models.ModelUser import  ModelUser
 from models.entities.User import   User
 
 
+
 justeatApp = Flask(__name__)
 #python enewere dfdf
-justeatApp.config.from_object(config['development'])
-justeatApp.config.from_object(config['mail'])
+justeatApp.config.from_object(Config['development'])
+justeatApp.config.from_object(Config['mail'])
 db = MySQL(justeatApp)
 mail = Mail(justeatApp)
 adminSesion = LoginManager(justeatApp)
@@ -43,7 +44,7 @@ def signup():
         regUsuario=db.connection.cursor()
         regUsuario.execute("INSERT INTO usuario (nombre, correo, clave, fechareg) VALUES (%s,%s,%s,%s)",(nombre, correo, claveCifrada, fechareg))
         db.connection.commit()
-        msg=Message(subject='Bienvenido a justeat, disfruta de tus juegos', recipients=[correo])
+        msg=Message(subject='Bienvenido a justeat disfruta de tus alimentos', recipients=[correo])
         msg.html = render_template('mail.html', nombre = nombre)
         mail.send(msg)
         return render_template('home.html')

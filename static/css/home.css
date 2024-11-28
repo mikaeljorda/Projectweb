@@ -1,0 +1,104 @@
+/* Estilos generales para el cuerpo */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Estilo para los encabezados del acordeón */
+.accordion-button {
+    background-color: #007bff;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 0.25rem;
+    transition: background-color 0.3s;
+}
+
+.accordion-button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos cuando el acordeón está abierto */
+.accordion-button:not(.collapsed) {
+    background-color: #0056b3;
+}
+
+/* Estilos para las imágenes dentro del acordeón */
+.accordion-body img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* Estilos para el texto dentro del acordeón */
+.accordion-body strong {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+/* Estilos para la tarjeta de comida */
+.card {
+    margin-top: 30px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.card-img-top {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    max-height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #666;
+}
+
+.btn {
+    font-size: 1rem;
+    padding: 10px 20px;
+    margin-top: 10px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+    border-color: #545b62;
+}
+
+/* Añadir espaciado al contenido */
+.container {
+    padding: 40px;
+}
+
+/* Estilo general para el acordeón */
+.accordion-item {
+    margin-bottom: 15px;
+}

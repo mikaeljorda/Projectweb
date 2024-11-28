@@ -1,4 +1,4 @@
-from models.entities.User import User 
+from models.entities.User import   User
 from flask_login import login_user
 
 class ModelUser:
